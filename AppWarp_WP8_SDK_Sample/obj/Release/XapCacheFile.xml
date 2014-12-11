@@ -1,0 +1,23 @@
+﻿<xapCache source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Release\AppWarp_WP8_SDK_Sample_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="12/9/2014 5:43:16 PM">
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\obj\Release\AppWarp_WP8_SDK_Sample.dll" archivePath="AppWarp_WP8_SDK_Sample.dll" lastWriteTime="12/9/2014 5:43:15 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="12/4/2014 12:46:59 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="12/4/2014 12:46:59 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="12/4/2014 12:46:59 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="12/4/2014 12:46:59 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="12/4/2014 12:46:59 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="12/4/2014 5:44:18 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Toolkit.Content\ApplicationBar.Add.png" archivePath="Toolkit.Content\ApplicationBar.Add.png" lastWriteTime="12/4/2014 5:44:18 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="12/4/2014 5:44:18 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="12/4/2014 5:44:18 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="12/4/2014 5:44:18 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="12/4/2014 5:44:18 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="12/9/2014 5:33:06 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Release\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="12/4/2014 12:46:59 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="12/4/2014 12:46:59 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK\APPWARP_CSHARP_SDK\APPWARP_CSHARP_SDK\Bin\WindowsPhone\Release\AppWarp_WP7_SDK.dll" archivePath="AppWarp_WP7_SDK.dll" lastWriteTime="12/9/2014 5:33:03 PM" />
+  <file source="D:\Wp8 DDLs\Coding4Fun.Toolkit (Windows Phone 8)\Coding4Fun.Toolkit.Controls.dll" archivePath="Coding4Fun.Toolkit.Controls.dll" lastWriteTime="12/8/2014 4:48:02 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="12/4/2014 4:00:02 PM" />
+  <file source="D:\Wp8 DDLs\Microsoft.Phone.Toolkit.Testing.dll" archivePath="Microsoft.Phone.Toolkit.Testing.dll" lastWriteTime="12/4/2014 4:46:41 PM" />
+  <file source="D:\Wp8 DDLs\Microsoft.VisualStudio.QualityTools.UnitTesting.Phone.dll" archivePath="Microsoft.VisualStudio.QualityTools.UnitTesting.Phone.dll" lastWriteTime="12/4/2014 4:46:41 PM" />
+  <file source="D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="12/9/2014 5:33:06 PM" />
+</xapCache>

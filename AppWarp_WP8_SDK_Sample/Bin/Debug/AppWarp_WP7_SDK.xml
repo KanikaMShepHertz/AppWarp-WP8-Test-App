@@ -1,0 +1,1006 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AppWarp_WP7_SDK</name>
+    </assembly>
+    <members>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.AllRoomsEvent">
+            <summary>
+            An instance of this is given in onGetAllRoomsDone of your ZoneRequestListener
+            implementation.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.AllRoomsEvent.getResult">
+            <summary>
+            gives the result as a WarpResponseResultCode.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.AllRoomsEvent.getRoomIds">
+            <summary>
+            gives an array of room ids.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.AllUsersEvent">
+            <summary>
+            An instance of this is given in onGetOnlineUsersDone of your ZoneRequestListener
+            implementation.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.AllUsersEvent.getResult">
+            <summary>
+            gives the result of the request.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.AllUsersEvent.getUserNames">
+            <summary>
+            gives an array of usernames
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.ChatEvent">
+            <summary>
+            An instance of this is given in onChatReceived of your NotifyListener implementation. 
+            </summary>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.listener.ChatRequestListener">
+            <summary>
+            Defines the interface which your object must implement to receive response
+            result corresponding to chat request.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.ChatRequestListener.onSendChatDone(System.Byte)">
+            <summary>
+            Invoked when a response for sendChat is received. Result of the
+            operation is passed as an argument of value WarpResponseResultCode.
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.ChatRequestListener.onSendPrivateChatDone(System.Byte)">
+            <summary>
+            Invoked when a response for sendPrivateChat is received. Result of the
+            operation is passed as an argument of value WarpResponseResultCode.
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.MatchedRoomsEvent">
+            <summary>
+            An instance of this is given in onGetMatchedRoomsDone of your ZoneRequestListener implementation. 
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.MatchedRoomsEvent.#ctor(System.Byte,com.shephertz.app42.gaming.multiplayer.client.events.RoomData[])">
+            <summary>
+            An instance of this is given in onGetMatchedRoomsDone of your GetRoomWithNUser and GetRoomWithProperties implementation. 
+            </summary>
+            <param name="result"></param>
+            <param name="roomData"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.MatchedRoomsEvent.getResult">
+            <summary>
+            Gives the result as a WarpResponseResultCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.MatchedRoomsEvent.getRoomsData">
+            <summary>
+            data associated with the room
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.MatchedRoomsEvent.buildMatchedRoomsEvent(com.shephertz.app42.gaming.multiplayer.client.message.WarpResponseMessage)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.TurnBasedRoomListener.onSendMoveDone(System.Byte)">
+            <summary>
+            Invoked when a response for a sendMove request is received.
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.WarpConnectionState">
+            <summary>
+            Define the response result codes for all the requests.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:com.shephertz.app42.gaming.multiplayer.client.ClientChannel.Connect(System.String,System.Int32)" -->
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.ClientChannel.Receive">
+            <summary>
+            Receive data from the server using the established socket connection
+            </summary>
+            <returns>The data received from the server</returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.ClientChannel.Close">
+            <summary>
+            Closes the Socket connection and releases all associated resources
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.ClientChannel.Send(com.shephertz.app42.gaming.multiplayer.client.message.WarpRequestMessage,System.Byte[],System.Int64)">
+            <summary>
+            Send the given data to the server using the established connection
+            </summary>
+            <param name="data">The data to send to the server</param>
+            <returns>The result of the Send request</returns>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.ConnectEvent">
+            <summary>
+            An instance of this is given in onConnectDone of your ConnectionRequestListener implementation. 
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.ConnectEvent.getResult">
+            <summary>
+            gives the result as a WarpResponseResultCode.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.listener.ConnectionRequestListener">
+            <summary>
+            Defines the interface which your object must implement to receive response
+            result corresponding to connect, disconnect and authenticate requests.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.ConnectionRequestListener.onConnectDone(com.shephertz.app42.gaming.multiplayer.client.events.ConnectEvent)">
+            <summary>
+            Invoked when a response for Connect request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.ConnectionRequestListener.onDisconnectDone(com.shephertz.app42.gaming.multiplayer.client.events.ConnectEvent)">
+            <summary>
+            Invoked when a response for Disconnect request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.WarpClient">
+            <summary>
+            An instance of WarpClient exposes all the APIs used to interact with your app's virtual
+            world. You must initialize this with your key pair before calling the connect and
+            authenticate APIs. Once authenticated, you can start interacting with your virtual world.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.GetInstance">
+            <summary>
+            Returns the singleton instance of WarpClient. This should be 
+            initialized with a key pair before it is used.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.initialize(System.String,System.String,System.String)">
+            <summary>
+            initializes the WarpClient instance with your key pair. This should
+            be your first API call to WarpClient and should be used before getting
+            the singleton instance.
+            </summary>
+            <param name="apiKey"></param>
+            <param name="pvtKey"></param>
+            <param name="hostName">App Warp Server IP Or Name</param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.initialize(System.String,System.String)">
+            <summary>
+            initializes the WarpClient instance with your key pair. This should
+            be your first API call to WarpClient and should be used before getting
+            the singleton instance.
+            </summary>
+            <param name="apiKey"></param>
+            <param name="pvtKey"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SetApiKey(System.String)">
+            <summary>
+            Sets the API key for the singleton instance of WarpClient.This is used if the user wants to connect to a different server 
+            with the same instance of WarpClient.The user will also have to call SetPrivateKey API.
+            </summary>
+            <returns>void</returns>
+            <param name="apiKey"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SetPrivateKey(System.String)">
+            <summary>
+            Sets the Secret key for the singleton instance of WarpClient.This is used if the user wants to connect to a different server 
+            with the same instance of WarpClient.The user will also have to call SetApiKey API.
+            </summary>
+            <returns>void</returns>
+            <param name="pvtKey"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SetServer(System.String)">
+            <summary>
+            Sets the Server Host Name for the singleton instance of WarpClient.This is used if the user wants to connect to a different server 
+            with the same instance of WarpClient.
+            </summary>
+            <returns>void</returns>
+            <param name="hostName"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.AddConnectionRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.ConnectionRequestListener)">
+            <summary>
+            Add your connection request listener. This interface is invoked 
+            for responses related to connection and authentication requests.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.RemoveConnectionRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.ConnectionRequestListener)">
+            <summary>
+            Removes your connection request listener.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.AddZoneRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.ZoneRequestListener)">
+            <summary>
+            Add your zone level request listener. This interface is invoked 
+            for responses related to users and room creation/deletion request.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.RemoveZoneRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.ZoneRequestListener)">
+            <summary>
+            Removes your zone level request listener.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.AddLobbyRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.LobbyRequestListener)">
+            <summary>
+            Add your lobby request listener. This interface is invoked 
+            for responses related to lobby join/leave/sub/unsubscribe requests.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.RemoveLobbyRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.LobbyRequestListener)">
+            <summary>
+            Removes your lobby request listener
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.AddRoomRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener)">
+            <summary>
+            Add your room request listener. This interface is invoked 
+            for responses related to room join/leave/sub/unsubscribe requests.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.RemoveRoomRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener)">
+            <summary>
+            Removes your room request listener
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.AddChatRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.ChatRequestListener)">
+            <summary>
+            Add your chat request listener. This interface is invoked 
+            for responses related to chat requests.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.AddTurnBasedRoomRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.TurnBasedRoomListener)">
+            <summary>
+            Adds the turn based room request listener.
+            </summary>
+            <param name="listener">Listener.</param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.RemoveTurnBasedRoomRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.TurnBasedRoomListener)">
+            <summary>
+            Removes the turn based room request listener.
+            </summary>
+            <param name="listener">Listener.</param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.RemoveChatRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.ChatRequestListener)">
+            <summary>
+            Removes your chat request listener.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.AddUpdateRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.UpdateRequestListener)">
+            <summary>
+            Add your updatepeers request listener. This interface is invoked 
+            for responses related to updatepeers requests.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.RemoveUpdateRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.UpdateRequestListener)">
+            <summary>
+            Removes your update listener.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.AddNotificationListener(com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener)">
+            <summary>
+            Add your notification request listener. This interface is invoked 
+            for notifications from resources that have been subscribed to.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.RemoveNotificationListener(com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener)">
+            <summary>
+            Removes your notification request listener.
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.Connect(System.String)">
+            <summary>
+            Initiates a connection request with the Warp Server. The result is
+            provided in onConnectDone on the ConnectionRequestListener.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SetCustomRoomData(System.String,System.String)">
+            <summary>
+            Associates the given custom data associated with the given room. The result is
+            provided in onSetCustomRoomDataDone on the RoomRequestListener.
+            </summary>
+            <param name="roomid"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SetCustomUserData(System.String,System.String)">
+            <summary>
+            Associates the given custom data associated with the given user. The result is
+            provided in onSetCustomUserDataDone on the ZoneRequestListener.
+            </summary>
+            <param name="username"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.GetOnlineUsers">
+            <summary>
+            Gets the names of all the users currently connected to your Warp zone. The result is provided
+            in onGetOnlineUsers on the ZoneRequestListener.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.GetAllRooms">
+            <summary>
+            Gets the ids of all the rooms currently live in your Warp Zone. The result is provided
+            in onGetAllRoomsDone on the ZoneRequestListener.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.GetLiveUserInfo(System.String)">
+            <summary>
+            Gets the live information associated the given user. The result is provided
+            in onGetLiveUserInfoDone on the ZoneRequestListener.
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.GetLiveRoomInfo(System.String)">
+            <summary>
+            Gets the live information associated with the given room id. The result is provided
+            in onGetLiveRoomInfoDone on the RoomRequestListener.
+            </summary>
+            <param name="roomid"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.GetLiveLobbyInfo">
+            <summary>
+            Gets the live information associated with the lobby. The result is provided
+            in onGetLiveRoomInfoDone on the LobbyRequestListener.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.JoinLobby">
+            <summary>
+            Joins the user to the lobby. The result is provided in onJoinLobbyDone 
+            on the LobbyRequestListener.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.LeaveLobby">
+            <summary>
+            Leaves the user from the lobby. The result is provided in onLeaveLobbyDone 
+            on the LobbyRequestListener.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SubscribeLobby">
+            <summary>
+            Subscribes the user for lobby notifications. The result of the request is provided in 
+            onSubscribeLobbyDone on the LobbyRequestListener.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.UnsubscribeLobby">
+            <summary>
+            UnSubscribes the user for lobby events. The result of the request is provided in 
+            onUnSubscribeLobbyDone on the LobbyRequestListener.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.CreateRoom(System.String,System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates a new room with the given parameters. The result of the request is provided in
+            onCreateRoomDone on the ZoneRequestListener
+            </summary>
+            <param name="name"></param>
+            <param name="owner"></param>
+            <param name="maxUsers"></param>
+            <param name="properties"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.CreateRoom(System.String,System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.Object},System.Int32)">
+            <summary>
+            Creates the room.
+            </summary>
+            <param name="name">Name.</param>
+            <param name="owner">Owner.</param>
+            <param name="maxUsers">Max users.</param>
+            <param name="tableProperties">Table properties.</param>
+            <param name="cleanupTime">Seconds after which the room is deleted if it remains empty (between 0 and 3600)</param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.CreateTurnRoom(System.String,System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.Object},System.Int32)">
+            <summary>
+            Creates a dynamic turn based room with the given parameters.
+            </summary>
+            <param name="name"></param>
+            <param name="owner"></param>
+            <param name="maxUsers"></param>
+            <param name="properties"></param>
+            <param name="turnTime"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.CreateTurnRoom(System.String,System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.Object},System.Int32,System.Int32)">
+            <summary>
+            sends a create turn based room request to the server. Result of the request is
+            provided in the onCreateRoomDone callback of the ZoneRequestListener.
+            </summary>
+            <param name="name">Name.</param>
+            <param name="owner">Owner.</param>
+            <param name="maxUsers">Max users.</param>
+            <param name="tableProperties">Table properties.</param>
+            <param name="time">Time.</param>
+            <param name="cleanupTime">Seconds after which the room is deleted if it remains empty (between 0 and 3600)</param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.DeleteRoom(System.String)">
+            <summary>
+            Deletes the room with the given id. The result of the request is provided in
+            onDeleteRoomDone on the ZoneRequestListener
+            </summary>
+            <param name="roomId"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.LeaveRoom(System.String)">
+            <summary>
+            Leaves the room with the given id. The result of the request is provided in
+            onLeaveRoomDone on the RoomRequestListener
+            </summary>
+            <param name="roomId"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.JoinRoom(System.String)">
+            <summary>
+            Joins the room with the given id. The result of the request is provided in
+            onJoinRoomDone on the RoomRequestListener
+            </summary>
+            <param name="roomId"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SubscribeRoom(System.String)">
+            <summary>
+            Subscribes the user for room notifications. The result of the request is provided in 
+            onSubscribeRoomDone on the RoomRequestListener.
+            </summary>
+            <param name="roomId"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.UnsubscribeRoom(System.String)">
+            <summary>
+            UnSubscribes the user for room notifications. The result of the request is provided in 
+            onUnSubscribeRoomDone on the RoomRequestListener.
+            </summary>
+            <param name="roomId"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SendChat(System.String)">
+            <summary>
+            Sends the given chat message in the room in which the user is 
+            currently CONNECTED. The result of the request is provided in the 
+            onSendChatDone of the ChatRequestListener.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.sendPrivateChat(System.String,System.String)">
+            <summary>
+            Sends the given chat message to the recipient if online. The message is
+            delivered independent of the sender and receiver's location i.e. across
+            rooms and lobby. The result of the request is provided in the 
+            onSendPrivateChatDone of the ChatRequestListener.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.sendUDPPrivateUpdate(System.String,System.Byte[])" -->
+        <!-- Badly formed XML comment ignored for member "M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.sendPrivateUpdate(System.String,System.Byte[])" -->
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SendUDPUpdatePeers(System.Byte[])">
+            <summary>
+            Sends the given raw update in the room in which the user is 
+            currently CONNECTED. The result of the request is provided in the 
+            onSendUpdateDone of the UpdateRequestListener.
+            Note: This update is sent over UDP (un-reliable) so it will not 
+            be acknowledged with a onSendUpdateDone event on registered UpdateListeners
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SendUpdatePeers(System.Byte[])">
+            <summary>
+            Sends the given raw update in the room in which the user is 
+            currently CONNECTED. The result of the request is provided in the 
+            onSendUpdateDone of the UpdateRequestListener.
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.startGame(System.Boolean,System.String)">
+            <summary>
+             sends a start game request to the server. Result of the request is
+            provided in the onGameStarted callback of the TurnBasedRoomListener.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.stopGame">
+            <summary>
+            sends a stop game request to the server. Result of the request is
+            provided in the onGameStopped callback of the TurnBasedRoomListener.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.getMoveHistory">
+            <summary>
+            sends a get move history request to the server. Result of the request is
+            provided in the onGetMoveHistoryDone callback of the TurnBasedRoomListener.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.LockProperties(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Locks the given properites of the currently joined room. Will fail if any property is locked
+            currently by another user.
+            </summary>
+            <param name="properties"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.UnlockProperties(System.Collections.Generic.List{System.String})">
+            <summary>
+            Unlcoks the given properites of the currently joined room. Will fail if any property is locked
+            currently by another user.
+            </summary>
+            <param name="properties"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.UpdateRoomProperties(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.List{System.String})">
+            <summary>
+            Updates the properties associated with the given room on the server. 
+            Result is provided in the onUpdatePropertyDone callback of the RoomListener.
+            </summary>
+            <param name="roomID"></param>
+            <param name="properties"></param>
+            <param name="removeList"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.JoinRoomWithProperties(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Sends a join room match making request to the server.
+            Result of the request is provided in the onJoinRoomDone callback of the RoomListener 
+            </summary>
+            <param name="properties"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.JoinRoomInRange(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Send a join room request with the given range of joined users. Specify the preference
+            order using the maxPreffered flag.
+            </summary>
+            <param name="minUserCount"></param>
+            <param name="maxUserCount"></param>
+            <param name="maxPreferred"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.GetRoomsInRange(System.Int32,System.Int32)">
+            <summary>
+            Retreives a list of rooms with the currently joined user count in the given range.
+            The result is given in the onGetMatchedRoomsDone callback of the ZoneRequestListener.
+            </summary>
+            <param name="minUserCount"></param>
+            <param name="maxUserCount"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.GetRoomWithProperties(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Retrieves information of the room that contain specific properties from the server. 
+            Result is provided in the onGetMatchedRoomsDone callback of the ZoneListener. 
+            </summary>
+            <param name="properties"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.sendMove(System.String,System.String)">
+            <summary>
+            Sends a move to the joined turn based room. Callback is onSendMoveDone and if successful,
+            will result in a onMoveCompleted notification to all subscribed users of the room.
+            </summary>
+            <param name="moveData"></param>     
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.LiveRoomInfoEvent">
+            <summary>
+            An instance of this is given in onGetLiveRoomInfoDone of your RoomRequestListener implementation. 
+            </summary>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.RoomEvent">
+            <summary>
+            An instance of this is provided in methods of your RoomRequestListener implementation.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.RoomEvent.getData">
+            <summary>
+            data associated with the room
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.RoomEvent.getResult">
+            <summary>
+            the result as WarpResponseResultCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LiveRoomInfoEvent.getJoinedUsers">
+            <summary>
+            gives the names of all the users who have joined the room
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LiveRoomInfoEvent.getCustomData">
+            <summary>
+            gives the custom data set on the room
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LiveRoomInfoEvent.getProperties">
+            <summary>
+            gives the properties of the room
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LiveRoomInfoEvent.getLockedProperties">
+            <summary>
+            gives the locked properties table of the room
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.LiveUserInfoEvent">
+            <summary>
+            An instance of this is given in onGetLiveUserInfoDone of your ZoneRequestListener implementation. 
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LiveUserInfoEvent.getResult">
+            <summary>
+            Gives the result as a WarpResponseResultCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LiveUserInfoEvent.isLocationLobby">
+            <summary>
+            If the user is in the lobby
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LiveUserInfoEvent.getLocationId">
+            <summary>
+            Room id where the user is currently joined.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LiveUserInfoEvent.getName">
+            <summary>
+            name of the user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LiveUserInfoEvent.getCustomData">
+            <summary>
+            custom data set for the user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.LobbyData">
+            <summary>
+            Represents static information of a lobby.
+            </summary>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.RoomData">
+            <summary>
+            Represents static information about a room.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.RoomData.getId">
+            <summary>
+            id of the room
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.RoomData.getRoomOwner">
+            <summary>
+            owner of the room
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.RoomData.getName">
+            <summary>
+            name given to the room
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.RoomData.getMaxUsers">
+            <summary>
+            maximum users allowed to join the room
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LobbyData.isPrimary">
+            <summary>
+            If the lobby is the default primary lobby
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.LobbyEvent">
+            <summary>
+            An instance of this is provided in methods of your LobbyRequestListener implementation. 
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LobbyEvent.getInfo">
+            <summary>
+            gives the data of the lobby
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.LobbyEvent.getResult">
+            <summary>
+            gives the result as WarpResponseResultCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.listener.LobbyRequestListener">
+            <summary>
+            Defines the interface which your object must implement to receive response
+            result corresponding to Lobby request.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.LobbyRequestListener.onJoinLobbyDone(com.shephertz.app42.gaming.multiplayer.client.events.LobbyEvent)">
+            <summary>
+            Invoked when the response for joinLobby request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.LobbyRequestListener.onLeaveLobbyDone(com.shephertz.app42.gaming.multiplayer.client.events.LobbyEvent)">
+            <summary>
+            Invoked when the response for leaveLobby request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.LobbyRequestListener.onSubscribeLobbyDone(com.shephertz.app42.gaming.multiplayer.client.events.LobbyEvent)">
+            <summary>
+            Invoked when the response for subscribeLobby request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.LobbyRequestListener.onUnSubscribeLobbyDone(com.shephertz.app42.gaming.multiplayer.client.events.LobbyEvent)">
+            <summary>
+            Invoked when the response for unsubscribeLobby request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.LobbyRequestListener.onGetLiveLobbyInfoDone(com.shephertz.app42.gaming.multiplayer.client.events.LiveRoomInfoEvent)">
+            <summary>
+            Invoked when the response for GetLiveLobbyInfo request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener">
+            <summary>
+            Defines the interface which your object must implement to receive notifications
+            from resources you have subscribed to.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onRoomCreated(com.shephertz.app42.gaming.multiplayer.client.events.RoomData)">
+            <summary>
+            Invoked when a room is created.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onRoomDestroyed(com.shephertz.app42.gaming.multiplayer.client.events.RoomData)">
+            <summary>
+            Invoked when a room is deleted.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onUserLeftRoom(com.shephertz.app42.gaming.multiplayer.client.events.RoomData,System.String)">
+            <summary>
+            Invoked when a user leaves a room.
+            </summary>
+            <param name="eventObj"></param>
+            <param name="username"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onUserJoinedRoom(com.shephertz.app42.gaming.multiplayer.client.events.RoomData,System.String)">
+            <summary>
+            Invoked when a user joins a room.
+            </summary>
+            <param name="eventObj"></param>
+            <param name="username"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onUserLeftLobby(com.shephertz.app42.gaming.multiplayer.client.events.LobbyData,System.String)">
+            <summary>
+            Invoked when a user joins the lobby.
+            </summary>
+            <param name="eventObj"></param>
+            <param name="username"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onUserJoinedLobby(com.shephertz.app42.gaming.multiplayer.client.events.LobbyData,System.String)">
+            <summary>
+            Invoked when a user joins the lobby.
+            </summary>
+            <param name="eventObj"></param>
+            <param name="username"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onChatReceived(com.shephertz.app42.gaming.multiplayer.client.events.ChatEvent)">
+            <summary>
+            Invoked when a chat message is sent in one of the subscribed rooms.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onUpdatePeersReceived(com.shephertz.app42.gaming.multiplayer.client.events.UpdateEvent)">
+            <summary>
+            Invoked when a updatePeers request is sent in one of the subscribed rooms.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onUserChangeRoomProperty(com.shephertz.app42.gaming.multiplayer.client.events.RoomData,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Invoked when a updatePeers request is sent in one of the subscribed rooms.
+            </summary>
+            <param name="roomData"></param>
+            <param name="sender"></param>
+            <param name="properties"></param>
+            <param name="lockedPropertiesTable"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onPrivateChatReceived(System.String,System.String)">
+            <summary>
+            Invoked when a private chat is received from the given sender.
+            </summary>
+            <param name="sender"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onMoveCompleted(com.shephertz.app42.gaming.multiplayer.client.events.MoveEvent)">
+            <summary>
+            Invoked when a user's move is completed in a turn based room
+            </summary>
+            <param name="?"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onUserPaused(System.String,System.Boolean,System.String)">
+            <summary>
+            Invoked to indicate that a user has lost connectivity. Subscribers of the users location 
+            will receive this.
+            </summary>
+            <param name="locid"></param>
+            <param name="isLobby"></param>
+            <param name="username"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onUserResumed(System.String,System.Boolean,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onGameStarted(System.String,System.String,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onGameStopped(System.String,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onPrivateUpdateReceived(System.String,System.Byte[],System.Boolean)" -->
+        <!-- Badly formed XML comment ignored for member "M:com.shephertz.app42.gaming.multiplayer.client.listener.NotifyListener.onNextTurnRequest(System.String)" -->
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener">
+            <summary>
+            Defines the interface which your object must implement to receive response
+            result corresponding to Room requests.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener.onSubscribeRoomDone(com.shephertz.app42.gaming.multiplayer.client.events.RoomEvent)">
+            <summary>
+            Invoked when the response for subscribeRoom request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener.onUnSubscribeRoomDone(com.shephertz.app42.gaming.multiplayer.client.events.RoomEvent)">
+            <summary>
+            Invoked when the response for unsubscribeRoom request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener.onJoinRoomDone(com.shephertz.app42.gaming.multiplayer.client.events.RoomEvent)">
+            <summary>
+            Invoked when the response for joinRoom request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener.onLeaveRoomDone(com.shephertz.app42.gaming.multiplayer.client.events.RoomEvent)">
+            <summary>
+            Invoked when the response for leaveRoom request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener.onGetLiveRoomInfoDone(com.shephertz.app42.gaming.multiplayer.client.events.LiveRoomInfoEvent)">
+            <summary>
+            Invoked when the response for GetLiveRoomInfo request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener.onSetCustomRoomDataDone(com.shephertz.app42.gaming.multiplayer.client.events.LiveRoomInfoEvent)">
+            <summary>
+            Invoked when the response for setCustomRoomData request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener.onUpdatePropertyDone(com.shephertz.app42.gaming.multiplayer.client.events.LiveRoomInfoEvent)">
+            <summary>
+            Invoked when the response for UpdateRoomProperties request is received.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener.onLockPropertiesDone(System.Byte)">
+            <summary>
+            Invoked when the response for LockProperties request is received.
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.RoomRequestListener.onUnlockPropertiesDone(System.Byte)">
+            <summary>
+            Invoked when the response for UnlockProperties request is received.
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.events.UpdateEvent">
+            <summary>
+            An instance of this is provided in onSendUpdateDone of your UpdateRequestListener implementation.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.UpdateEvent.getUpdate">
+            <summary>
+            the custom update sent
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.events.UpdateEvent.getIsUdp">
+            <summary>
+            true if the received update was sent over UDP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.listener.UpdateRequestListener">
+            <summary>
+            interface for receiving responses for updatePeers request.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.UpdateRequestListener.onSendUpdateDone(System.Byte)">
+            <summary>
+            Invoked when a response for sendUpdatePeers is received. Result of the
+            operation is passed as an argument of value WarpResponseResultCode.
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.UpdateRequestListener.onSendPrivateUpdateDone(System.Byte)">
+            <summary>
+            Result of SendPrivateUpdate request. The result value maps to a WarpResponseResultCode
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.command.WarpResponseResultCode">
+            <summary>
+            Define the response result codes for all the requests.
+            </summary>
+        </member>
+        <member name="T:com.shephertz.app42.gaming.multiplayer.client.listener.ZoneRequestListener">
+            <summary>
+            Defines the interface which your object must implement to receive response
+            result corresponding to zone level request.
+            </summary>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.ZoneRequestListener.onDeleteRoomDone(com.shephertz.app42.gaming.multiplayer.client.events.RoomEvent)">
+            <summary>
+            Invoked when a response for DeleteRoom request is receieved.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.ZoneRequestListener.onGetAllRoomsDone(com.shephertz.app42.gaming.multiplayer.client.events.AllRoomsEvent)">
+            <summary>
+            Invoked when a response for GetAllRooms request is receieved.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.ZoneRequestListener.onCreateRoomDone(com.shephertz.app42.gaming.multiplayer.client.events.RoomEvent)">
+            <summary>
+            Invoked when a response for CreateRoom request is receieved.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.ZoneRequestListener.onGetOnlineUsersDone(com.shephertz.app42.gaming.multiplayer.client.events.AllUsersEvent)">
+            <summary>
+            Invoked when a response for GetOnlineUsers request is receieved.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.ZoneRequestListener.onGetLiveUserInfoDone(com.shephertz.app42.gaming.multiplayer.client.events.LiveUserInfoEvent)">
+            <summary>
+            Invoked when a response for GetLiveUserInfo request is receieved.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.ZoneRequestListener.onSetCustomUserDataDone(com.shephertz.app42.gaming.multiplayer.client.events.LiveUserInfoEvent)">
+            <summary>
+            Invoked when a response for SetCustomUserData request is receieved.
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:com.shephertz.app42.gaming.multiplayer.client.listener.ZoneRequestListener.onGetMatchedRoomsDone(com.shephertz.app42.gaming.multiplayer.client.events.MatchedRoomsEvent)">
+            <summary>
+            Invoked when a response from GetRoomWithNUser and GetRoomWithProperties 
+            </summary>
+            <param name="matchedRoomsEvent"></param>
+        </member>
+    </members>
+</doc>

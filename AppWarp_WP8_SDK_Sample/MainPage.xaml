@@ -1,0 +1,68 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="AppWarp_WP8_SDK_Sample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    ApplicationBar = "{StaticResource GlobalAppBar}">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0">
+            <!--<TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>-->
+            <TextBlock Text="App Warp WP8" Margin="0" FontSize="36" FontWeight="Bold" TextAlignment="Center"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="15,0,15,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Enter API key" FontSize="30" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="1" Text="Enter Secret key" FontSize="30" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="2" Text="Select Server" FontSize="30" VerticalAlignment="Center"/>
+            <TextBox x:Name="apiKey_txtblock" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="secretKey_txtblock" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center"/>
+            <toolkit:ListPicker x:Name="server_listpicker" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" VerticalAlignment="Center" ExpansionMode="FullScreenOnly">
+                <!--<toolkit:ListPicker.FullModeItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <TextBlock FontSize="28" Text="US"/>
+                            <TextBlock FontSize="28" Text="EU"/>
+                            <TextBlock FontSize="28" Text="SP"/>
+                            <TextBlock FontSize="28" Text="JP"/>
+                        </Grid>
+                    </DataTemplate>
+                </toolkit:ListPicker.FullModeItemTemplate>-->
+            </toolkit:ListPicker>
+            <ToggleButton x:Name="recoveryAllowance_togglebtn" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Content="Recovery Allowance" VerticalAlignment="Center"/>
+            <Button x:Name="initialize_btn" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" VerticalAlignment="Center" Content="Initialize" HorizontalAlignment="Center" Click="initialize_btn_Click"/>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
