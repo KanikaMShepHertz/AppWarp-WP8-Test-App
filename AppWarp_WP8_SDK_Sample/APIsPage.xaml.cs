@@ -312,14 +312,11 @@ namespace AppWarp_WP8_SDK_Sample
                         break;
                     case "Connect":
                         Debug.WriteLine("Connect API called.");
-                        if (WarpClient.GetInstance() != null)
-                        {
-                            WarpClient.GetInstance().Connect(App.USER_NAME);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Please click on Initialize before connecting.");
-                        }
+                        InputPrompt prompt35 = new InputPrompt();
+                        prompt35.Completed += input_completed35;
+                        prompt35.Title = "User Name";
+                        prompt35.Message = "Please enter a user name";
+                        prompt35.Show();
                         break;
                     case "Disconnect":
                         Debug.WriteLine("Disconnect API called.");
@@ -660,6 +657,21 @@ namespace AppWarp_WP8_SDK_Sample
             else
             {
                 MessageBox.Show("No valid API was selected.Please select one.");
+            }
+        }
+
+        private void input_completed35(object sender, PopUpEventArgs<string, PopUpResult> e)
+        {
+            if (e.Result != null)
+            {
+                if (WarpClient.GetInstance() != null)
+                {
+                    WarpClient.GetInstance().Connect(e.Result);
+                }
+                else
+                {
+                    MessageBox.Show("Please click on Initialize before connecting.");
+                }
             }
         }
 
