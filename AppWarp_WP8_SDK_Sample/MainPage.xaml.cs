@@ -59,22 +59,27 @@ namespace AppWarp_WP8_SDK_Sample
                 }
                 else if (WarpResponseResultCode == 0)
                 {
-                    MessageBox.Show("WarpClient instance initialized successfully!");
-                    WarpClient game = WarpClient.GetInstance();
-                    game.AddConnectionRequestListener(new ConListen(this));
-                    game.AddTurnBasedRoomRequestListener(new TurnBasedRoomReqListener(this));
-                    game.AddUpdateRequestListener(new UpdateReqListener(this));
-                    game.AddZoneRequestListener(new ZoneReqListener(this));
-                    game.AddLobbyRequestListener(new LobbyReqListener(this));
-                    game.AddRoomRequestListener(new RoomReqListener(this));
-                    game.AddNotificationListener(new NotificationListener(this));
-                    game.AddChatRequestListener(new ChatReqListener(this));
-                    if ((bool)recoveryAllowance_togglebtn.IsChecked)
+                    MessageBoxResult result = MessageBox.Show("WarpClient instance initialized successfully!", "", MessageBoxButton.OK);
+                    if (result == MessageBoxResult.OK)
                     {
-                        WarpClient.setRecoveryAllowance(20);
+                        WarpClient game = WarpClient.GetInstance();
+                        game.AddConnectionRequestListener(new ConListen(this));
+                        game.AddTurnBasedRoomRequestListener(new TurnBasedRoomReqListener(this));
+                        game.AddUpdateRequestListener(new UpdateReqListener(this));
+                        game.AddZoneRequestListener(new ZoneReqListener(this));
+                        game.AddLobbyRequestListener(new LobbyReqListener(this));
+                        game.AddRoomRequestListener(new RoomReqListener(this));
+                        game.AddNotificationListener(new NotificationListener(this));
+                        game.AddChatRequestListener(new ChatReqListener(this));
+                        if ((bool)recoveryAllowance_togglebtn.IsChecked)
+                        {
+                            WarpClient.setRecoveryAllowance(20);
+                        }
+                        string server_location = server_listpicker.SelectedItem.ToString();
+                        game.SetGeo(server_location.ToLower());
+                        NavigationService.Navigate(new Uri("/APIsPage.xaml", UriKind.Relative));
                     }
-                    string server_location = server_listpicker.SelectedItem.ToString();
-                    game.SetGeo(server_location.ToLower());
+                    
                 }
                 else
                 {
@@ -84,6 +89,29 @@ namespace AppWarp_WP8_SDK_Sample
             else
             {
                 MessageBox.Show("Both field are mandatory!");
+            }
+        }
+
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult m = MessageBox.Show("Are you sure you want to exit the application?", "Exit", MessageBoxButton.OKCancel);
+            if (m == MessageBoxResult.OK)
+            {
+                try
+                {
+                    e.Cancel = false;
+                    Application.Current.Terminate();
+                    //while (NavigationService.CanGoBack)
+                    //    NavigationService.RemoveBackEntry();
+                }
+                catch (InvalidOperationException ex)
+                {
+                    Debug.WriteLine(ex.StackTrace);
+                }
+            }
+            else if (m == MessageBoxResult.Cancel)
+            {
+                e.Cancel = true; //Cancelling the default back option
             }
         }
 

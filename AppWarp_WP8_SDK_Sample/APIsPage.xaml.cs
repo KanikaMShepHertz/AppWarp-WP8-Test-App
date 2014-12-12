@@ -104,6 +104,7 @@ namespace AppWarp_WP8_SDK_Sample
             List<AlphaKeyGroup<APIs>> DataSource = AlphaKeyGroup<APIs>.CreateGroups(source,
                 System.Threading.Thread.CurrentThread.CurrentUICulture,
                 (APIs s) => { return s.APIName; }, true);
+            api_longlistselector.ItemsSource = null;
             api_longlistselector.ItemsSource = DataSource;
         }
 
@@ -1048,7 +1049,37 @@ namespace AppWarp_WP8_SDK_Sample
 
         }
 
+        public void navigateToResponsePage()
+        {
+            NavigationService.Navigate(new Uri("/APIsPage.xaml", UriKind.Relative));
+        }
+
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult m = MessageBox.Show("Are you sure you want to exit the application?", "Exit", MessageBoxButton.OKCancel);
+            if (m == MessageBoxResult.OK)
+            {
+                try
+                {
+                    e.Cancel = false;
+                    Application.Current.Terminate();
+                    //while (NavigationService.CanGoBack)
+                    //    NavigationService.RemoveBackEntry();
+                }
+                catch (InvalidOperationException ex)
+                {
+                    Debug.WriteLine(ex.StackTrace);
+                }
+            }
+            else if (m == MessageBoxResult.Cancel)
+            {
+                e.Cancel = true; //Cancelling the default back option
+            }
+        }
+
     }
+
+
 
     public class APIs
     {

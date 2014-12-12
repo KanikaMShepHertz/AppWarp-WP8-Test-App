@@ -187,12 +187,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AppWarp_WP7_SDK\APPWARP_CSHARP_SDK\APPWARP_CSHARP_SDK\AppWarp_WP7_SDK.csproj">
-      <Project>{7A355F86-A39E-4B82-911A-180AC7D30499}</Project>
-      <Name>AppWarp_WP7_SDK</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
+    <Reference Include="AppWarp_WP7_SDK, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Wp8 DDLs\AppWarp_WP7_SDK.dll</HintPath>
+    </Reference>
     <Reference Include="Coding4Fun.Toolkit.Controls">
       <HintPath>..\..\..\Wp8 DDLs\Coding4Fun.Toolkit (Windows Phone 8)\Coding4Fun.Toolkit.Controls.dll</HintPath>
     </Reference>

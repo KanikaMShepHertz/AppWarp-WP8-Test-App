@@ -15,8 +15,10 @@ namespace AppWarp_WP8_SDK_Sample
     {
 
         public static string USER_NAME = "kanika23";
-        public static string Api_key = "19b5d3409bf22f86f17dc1cdd52c5c31f3dececcf7d139c09ed78ab99e75f6e1";
-        public static string Secret_key = "811a8a2c1e16d37e25dded86b659ad3ae664a32ef07e913d2c00bf6bd121874f";
+        //public static string Api_key = "19b5d3409bf22f86f17dc1cdd52c5c31f3dececcf7d139c09ed78ab99e75f6e1";
+        //public static string Secret_key = "811a8a2c1e16d37e25dded86b659ad3ae664a32ef07e913d2c00bf6bd121874f";
+        public static string Api_key = "";
+        public static string Secret_key = "";
         public ObservableCollection<string> responseOC;
         public ObservableCollection<string> notificationOC;
         /// <summary>

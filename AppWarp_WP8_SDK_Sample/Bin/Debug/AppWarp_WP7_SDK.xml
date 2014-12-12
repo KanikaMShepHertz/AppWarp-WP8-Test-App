@@ -164,7 +164,7 @@
         </member>
         <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.GetInstance">
             <summary>
-            Returns the singleton instance of WarpClient. This should be 
+            Returns the singletom instance of WarpClient. This should be 
             initialized with a key pair before it is used.
             </summary>
             <returns></returns>
@@ -187,30 +187,6 @@
             </summary>
             <param name="apiKey"></param>
             <param name="pvtKey"></param>
-        </member>
-        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SetApiKey(System.String)">
-            <summary>
-            Sets the API key for the singleton instance of WarpClient.This is used if the user wants to connect to a different server 
-            with the same instance of WarpClient.The user will also have to call SetPrivateKey API.
-            </summary>
-            <returns>void</returns>
-            <param name="apiKey"></param>
-        </member>
-        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SetPrivateKey(System.String)">
-            <summary>
-            Sets the Secret key for the singleton instance of WarpClient.This is used if the user wants to connect to a different server 
-            with the same instance of WarpClient.The user will also have to call SetApiKey API.
-            </summary>
-            <returns>void</returns>
-            <param name="pvtKey"></param>
-        </member>
-        <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.SetServer(System.String)">
-            <summary>
-            Sets the Server Host Name for the singleton instance of WarpClient.This is used if the user wants to connect to a different server 
-            with the same instance of WarpClient.
-            </summary>
-            <returns>void</returns>
-            <param name="hostName"></param>
         </member>
         <member name="M:com.shephertz.app42.gaming.multiplayer.client.WarpClient.AddConnectionRequestListener(com.shephertz.app42.gaming.multiplayer.client.listener.ConnectionRequestListener)">
             <summary>

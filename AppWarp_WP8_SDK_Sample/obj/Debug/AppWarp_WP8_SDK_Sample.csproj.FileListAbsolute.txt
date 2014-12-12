@@ -1,4 +1,3 @@
-D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\obj\Debug\AppWarp_WP8_SDK_Sample.pdb
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\obj\Debug\AppWarp_WP8_SDK_Sample.csprojResolveAssemblyReference.cache
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\obj\Debug\App.g.cs
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\obj\Debug\APIsPage.g.cs
@@ -25,8 +24,6 @@ D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\Coding4Fun
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\Microsoft.Phone.Toolkit.Testing.dll
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTesting.Phone.dll
-D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\AppWarp_WP7_SDK.pdb
-D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\AppWarp_WP7_SDK.xml
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
@@ -78,4 +75,5 @@ D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\vi-VN\Micr
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\obj\Debug\AppWarp_WP8_SDK_Sample.dll
+D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\obj\Debug\AppWarp_WP8_SDK_Sample.pdb
 D:\GitHub\AppWarp_WP7_SDK_TestSample\AppWarp_WP8_SDK_Sample\obj\Debug\XapCacheFile.xml

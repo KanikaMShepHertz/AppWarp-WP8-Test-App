@@ -26,12 +26,12 @@ namespace AppWarp_WP8_SDK_Sample
 
         public void onConnectDone(com.shephertz.app42.gaming.multiplayer.client.events.ConnectEvent eventObj)
         {
-            Global_data.populateResponseListFromCallback("onConnectDone");
+            Global_data.populateResponseListFromResult("onConnectDone", eventObj.getResult());
         }
 
         public void onDisconnectDone(com.shephertz.app42.gaming.multiplayer.client.events.ConnectEvent eventObj)
         {
-            Global_data.populateResponseListFromCallback("onDisconnectDone");
+            Global_data.populateResponseListFromResult("onDisconnectDone", eventObj.getResult());
         }
 
         public void onInitUDPDone(byte resultCode)
