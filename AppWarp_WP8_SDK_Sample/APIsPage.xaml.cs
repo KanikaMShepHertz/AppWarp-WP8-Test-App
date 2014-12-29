@@ -28,6 +28,7 @@ namespace AppWarp_WP8_SDK_Sample
         string userName = null;
         string roomId = null;
         string propertyKey = null;
+        InputPrompt openPrompt = null;
 
         public APIsPage()
         {
@@ -133,6 +134,8 @@ namespace AppWarp_WP8_SDK_Sample
                         Deployment.Current.Dispatcher.BeginInvoke(() =>
                {
                    (App.Current as App).responseOC.Add("sessio Id = " + sessionId);
+                   navigateToResponse_class objnavigation_class = new navigateToResponse_class();
+                   objnavigation_class.navigateToResponsepage();
                });
                         break;
                     case "GetApiKey":
@@ -141,6 +144,8 @@ namespace AppWarp_WP8_SDK_Sample
                         Deployment.Current.Dispatcher.BeginInvoke(() =>
                {
                    (App.Current as App).responseOC.Add("API key = " + apiKey);
+                   navigateToResponse_class objnavigation_class = new navigateToResponse_class();
+                   objnavigation_class.navigateToResponsepage();
                });
                         break;
                     case "GetPrivateKey":
@@ -149,6 +154,8 @@ namespace AppWarp_WP8_SDK_Sample
                         Deployment.Current.Dispatcher.BeginInvoke(() =>
                {
                    (App.Current as App).responseOC.Add("Secret key = " + secretKey);
+                   navigateToResponse_class objnavigation_class = new navigateToResponse_class();
+                   objnavigation_class.navigateToResponsepage();
                });
                         break;
                     case "SetApiKey":
@@ -158,6 +165,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt21.Title = "API Key";
                         prompt21.Message = "Please enter the API key";
                         prompt21.Show();
+                        openPrompt = prompt21;
                         break;
                     case "SetPrivateKey":
                         Debug.WriteLine("SetPrivateKey API called.");
@@ -166,6 +174,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt22.Title = "Secret Key";
                         prompt22.Message = "Please enter the Secret key";
                         prompt22.Show();
+                        openPrompt = prompt22;
                         break;
                     case "SetServer":
                         Debug.WriteLine("SetServer API called.");
@@ -317,6 +326,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt35.Title = "User Name";
                         prompt35.Message = "Please enter a user name";
                         prompt35.Show();
+                        openPrompt = prompt35;
                         break;
                     case "Disconnect":
                         Debug.WriteLine("Disconnect API called.");
@@ -353,6 +363,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt.Title = "Session Id";
                         prompt.Message = "Please enter a session id";
                         prompt.Show();
+                        openPrompt = prompt;
                         break;
                     case "setRecoveryAllowance":
                         Debug.WriteLine("setRecoveryAllowance API called.");
@@ -361,6 +372,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt2.Title = "Max Recovery Time";
                         prompt2.Message = "Please enter max recovery time";
                         prompt2.Show();
+                        openPrompt = prompt2;
                         break;
                     case "SetCustomRoomData":
                         Debug.WriteLine("SetCustomRoomData API called.");
@@ -369,6 +381,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt5.Title = "Custom Room Id";
                         prompt5.Message = "Please enter custom Room Id";
                         prompt5.Show();
+                        openPrompt = prompt5;
                         break;
                     case "SetCustomUserData":
                         Debug.WriteLine("SetCustomUserData API called.");
@@ -377,6 +390,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt7.Title = "User Name";
                         prompt7.Message = "Please enter a user name";
                         prompt7.Show();
+                        openPrompt = prompt7;
                         break;
                     case "GetOnlineUsers":
                         Debug.WriteLine("GetOnlineUsers API called.");
@@ -399,6 +413,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt9.Title = "User Name";
                         prompt9.Message = "Please enter a user name";
                         prompt9.Show();
+                        openPrompt = prompt9;
                         break;
                     case "GetLiveRoomInfo":
                         Debug.WriteLine("GetLiveRoomInfo API called.");
@@ -407,6 +422,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt10.Title = "Room Id";
                         prompt10.Message = "Please enter the room id.";
                         prompt10.Show();
+                        openPrompt = prompt10;
                         break;
                     case "GetLiveLobbyInfo":
                         Debug.WriteLine("GetLiveLobbyInfo API called.");
@@ -450,6 +466,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt3.Title = "Room name";
                         prompt3.Message = "Please enter a name for the room";
                         prompt3.Show();
+                        openPrompt = prompt3;
                         break;
                     case "CreateTurnBasedRoom":
                         Debug.WriteLine("CreateTurnBasedRoom API called.");
@@ -458,6 +475,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt4.Title = "Room name";
                         prompt4.Message = "Please enter a name for the room";
                         prompt4.Show();
+                        openPrompt = prompt4;
                         break;
                     case "DeleteRoom":
                         Debug.WriteLine("DeleteRoom API called.");
@@ -466,6 +484,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt11.Title = "Room Id";
                         prompt11.Message = "Please enter Room Id";
                         prompt11.Show();
+                        openPrompt = prompt11;
                         break;
                     case "LeaveRoom":
                         Debug.WriteLine("LeaveRoom API called.");
@@ -474,6 +493,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt12.Title = "Room Id";
                         prompt12.Message = "Please enter Room Id";
                         prompt12.Show();
+                        openPrompt = prompt12;
                         break;
                     case "JoinRoom":
                         Debug.WriteLine("JoinRoom API called.");
@@ -482,6 +502,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt13.Title = "Room Id";
                         prompt13.Message = "Please enter Room Id";
                         prompt13.Show();
+                        openPrompt = prompt13;
                         break;
                     case "SubscribeRoom":
                         Debug.WriteLine("SubscribeRoom API called.");
@@ -490,6 +511,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt14.Title = "Room Id";
                         prompt14.Message = "Please enter Room Id";
                         prompt14.Show();
+                        openPrompt = prompt14;
                         break;
                     case "UnsubscribeRoom":
                         Debug.WriteLine("UnsubscribeRoom API called.");
@@ -498,6 +520,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt15.Title = "Room Id";
                         prompt15.Message = "Please enter Room Id";
                         prompt15.Show();
+                        openPrompt = prompt15;
                         break;
                     case "SendChat":
                         Debug.WriteLine("SendChat API called.");
@@ -506,6 +529,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt16.Title = "Message";
                         prompt16.Message = "Please enter your message";
                         prompt16.Show();
+                        openPrompt = prompt16;
                         break;
                     case "sendPrivateChat":
                         Debug.WriteLine("sendPrivateChat API called.");
@@ -514,6 +538,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt17.Title = "User Name";
                         prompt17.Message = "Please enter a user name";
                         prompt17.Show();
+                        openPrompt = prompt17;
                         break;
                     case "sendUDPPrivateUpdate":
                         Debug.WriteLine("sendUDPPrivateUpdate API called.");
@@ -522,6 +547,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt23.Title = "User Name";
                         prompt23.Message = "Please enter a user name";
                         prompt23.Show();
+                        openPrompt = prompt23;
                         break;
                     case "sendPrivateUpdate":
                         Debug.WriteLine("sendPrivateUpdate API called.");
@@ -530,6 +556,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt24.Title = "User Name";
                         prompt24.Message = "Please enter a user name";
                         prompt24.Show();
+                        openPrompt = prompt24;
                         break;
                     case "SendUDPUpdatePeers":
                         Debug.WriteLine("SendUDPUpdatePeers API called.");
@@ -586,6 +613,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt25.Title = "Property key";
                         prompt25.Message = "Please enter a Property key";
                         prompt25.Show();
+                        openPrompt = prompt25;
                         break;
                     case "UnlockProperties":
                         Debug.WriteLine("UnlockProperties API called.");
@@ -594,6 +622,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt27.Title = "Property key";
                         prompt27.Message = "Please enter a Property key";
                         prompt27.Show();
+                        openPrompt = prompt27;
                         break;
                     case "UpdateRoomProperties":
                         Debug.WriteLine("UpdateRoomProperties API called.");
@@ -602,6 +631,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt28.Title = "Room Id";
                         prompt28.Message = "Please enter Room Id";
                         prompt28.Show();
+                        openPrompt = prompt28;
                         break;
                     case "JoinRoomWithProperties":
                         Debug.WriteLine("JoinRoomWithProperties API called.");
@@ -610,6 +640,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt31.Title = "Property key";
                         prompt31.Message = "Please enter a Property key";
                         prompt31.Show();
+                        openPrompt = prompt31;
                         break;
                     case "JoinRoomInRange":
                         Debug.WriteLine("JoinRoomInRange API called.");
@@ -632,6 +663,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt32.Title = "Property key";
                         prompt32.Message = "Please enter a Property key";
                         prompt32.Show();
+                        openPrompt = prompt32;
                         break;
                     case "SetNextTurn":
                         Debug.WriteLine("SetNextTurn API called.");
@@ -640,6 +672,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt19.Title = "Next Turn User Name";
                         prompt19.Message = "Please enter a user name to set the next turn for";
                         prompt19.Show();
+                        openPrompt = prompt19;
                         break;
                     case "sendMove":
                         Debug.WriteLine("sendMove API called.");
@@ -648,6 +681,7 @@ namespace AppWarp_WP8_SDK_Sample
                         prompt20.Title = "Move Data";
                         prompt20.Message = "Please enter your move data to be sent.";
                         prompt20.Show();
+                        openPrompt = prompt20;
                         break;
                     default:
                         MessageBox.Show("No valid API was selected.Please select one.");
@@ -685,6 +719,7 @@ namespace AppWarp_WP8_SDK_Sample
                 prompt33.Title = "Property value";
                 prompt33.Message = "Please enter the property value for the key : " + propertyKey;
                 prompt33.Show();
+                openPrompt = prompt33;
             }
         }
 
@@ -708,6 +743,7 @@ namespace AppWarp_WP8_SDK_Sample
                 prompt34.Title = "Property value";
                 prompt34.Message = "Please enter the property value for the key : " + propertyKey;
                 prompt34.Show();
+                openPrompt = prompt34;
             }
         }
 
@@ -731,6 +767,7 @@ namespace AppWarp_WP8_SDK_Sample
                 prompt29.Title = "Property key";
                 prompt29.Message = "Please enter the property key";
                 prompt29.Show();
+                openPrompt = prompt29;
             }
         }
 
@@ -744,6 +781,7 @@ namespace AppWarp_WP8_SDK_Sample
                 prompt30.Title = "Property value";
                 prompt30.Message = "Please enter the property value for the key : " + propertyKey;
                 prompt30.Show();
+                openPrompt = prompt30;
             }
         }
 
@@ -777,6 +815,7 @@ namespace AppWarp_WP8_SDK_Sample
                 prompt26.Title = "Property value";
                 prompt26.Message = "Please enter the property value for the key : "+propertyKey;
                 prompt26.Show();
+                openPrompt = prompt26;
             }
         }
 
@@ -854,6 +893,7 @@ namespace AppWarp_WP8_SDK_Sample
                 prompt18.Title = "Private Message";
                 prompt18.Message = "Please enter your private message";
                 prompt18.Show();
+                openPrompt = prompt18;
             }
         }
 
@@ -948,6 +988,7 @@ namespace AppWarp_WP8_SDK_Sample
                 prompt8.Title = "Room Data";
                 prompt8.Message = "Please enter the room data";
                 prompt8.Show();
+                openPrompt = prompt8;
             }
         }
 
@@ -970,6 +1011,7 @@ namespace AppWarp_WP8_SDK_Sample
                 prompt6.Title = "Room Data";
                 prompt6.Message = "Please enter the room data";
                 prompt6.Show();
+                openPrompt = prompt6;
             }
         }
 
@@ -1022,6 +1064,7 @@ namespace AppWarp_WP8_SDK_Sample
                 prompt1.Title = "User Name";
                 prompt1.Message = "Please enter a user name";
                 prompt1.Show();
+                openPrompt = prompt1;
             }
         }
 
@@ -1032,7 +1075,14 @@ namespace AppWarp_WP8_SDK_Sample
                 userName = e.Result;
                 if (WarpClient.GetInstance() != null)
                 {
-                    WarpClient.GetInstance().RecoverConnectionWithSessioId(sessionId, userName);
+                    try
+                    {
+                        WarpClient.GetInstance().RecoverConnectionWithSessioId(sessionId, userName);
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine(ex.StackTrace);
+                    }
                 }
                 else
                 {
@@ -1068,6 +1118,22 @@ namespace AppWarp_WP8_SDK_Sample
 
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {
+            try
+            {
+                if (openPrompt.IsOpen == true)
+                {
+                    openPrompt.IsEnabled = false;
+                    openPrompt.Visibility = Visibility.Collapsed;
+                    //LayoutRoot.IsHitTestVisible = true;
+                    e.Cancel = true;
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+
             MessageBoxResult m = MessageBox.Show("Are you sure you want to exit the application?", "Exit", MessageBoxButton.OKCancel);
             if (m == MessageBoxResult.OK)
             {
@@ -1090,7 +1156,6 @@ namespace AppWarp_WP8_SDK_Sample
         }
 
     }
-
 
 
     public class APIs
